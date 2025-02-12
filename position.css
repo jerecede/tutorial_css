@@ -1,0 +1,66 @@
+.el-1{
+    background-color:aqua;
+    height: 200px;
+}
+
+.el-2{
+    background-color:blue;
+    height: 200px;
+}
+
+.el-3{
+    background-color:red;
+    height: 300px;
+    width: 100px;
+    /* elementi sempre visibili, se ne frega dello scroll, è coperto perche gli altri div sono stati creati dopo */
+    position: fixed;
+    left: 20px;
+    top: 50px;
+}
+
+.el-4{
+    background-color:green;
+    height: 200px;
+    /* non succede niente ma... */
+    position: relative;
+    /* posizione originale vuota, si muove rispetto alla posizione originale*/
+    left: 20px;
+    top: 50px;
+}
+
+.el-5{
+    background-color:orangered;
+    height: 200px;
+}
+
+.el-6{
+    background-color:purple;
+    height: 400px;
+    /* senza istruzioni alla mamma non succede niente, ma influenza il figlio, che si muovera rispetto alla mamma div */
+    position: relative;
+}
+
+.el-7{
+    background-color:rgb(232, 23, 120);
+    height: 200px;
+    /* scompare, fa 0 px quindi mettiamo px */
+    position: absolute;
+    /* width: 200px; */
+    height: 200px;
+    /* si muove rispetto alla pagina intera */
+    left: 20px;
+    top: 100px;
+    /* width ha precedenza quindi leviamolo cosi right funziona */
+    right: 50px;
+}
+
+/* figlio */
+.el-8{
+    background-color:grey;
+    height: 200px;
+    /* stesse dimensioni di mamma el-6 quindi copre tutto con grey, quindi width */
+    width: 200px;
+    position: absolute;
+    right: 50px;
+    top: 50px;
+}

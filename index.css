@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 /* selezione standard, seleziona tutto, meglio solo per body, header.. */
+
 body{
     background-color: midnightblue;
+    /* se non defniti i figli ereditano tutto dal genitore */
+    font-family: "Rubik", serif;
 }
 
 h2{
