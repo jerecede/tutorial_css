@@ -1,0 +1,27 @@
+.first-el{
+    background-color:brown;
+    color: white;
+    /* nonostante dimensione il <p> è sempre block, ma cambia dimensione */
+    width: 300px;
+}
+
+.second-el{
+    background-color:lawngreen;
+    color: white;
+    width: 300px;
+}
+
+.third-el{
+    background-color: black;
+    /* inline ignora le dimensioni */
+    width: 300px;
+    /* quindi fare... */
+    display: block;
+}
+
+.fourth-el{
+    background-color: purple;
+    width: 300px;
+    /* inline-block un inline che puo esere dimensionato */
+    display: inline-block;
+}

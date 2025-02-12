@@ -1,0 +1,160 @@
+/* selezione standard, seleziona tutto, meglio solo per body, header.. */
+body{
+    background-color: midnightblue;
+}
+
+h2{
+    /* altro modo di sprimere colore */
+    color: rgba(45, 208, 208, 0.908);
+    /*
+    oppure
+    color: #0000FF00
+    00 00 FF 00
+    R  G  B  A
+    */
+}
+
+/* seleziona classe, con il punto, la classe la crei tu, se voglio h2 con certi attributi uso la classe e non la selezione standard */
+/* la classe ha precedenza sulla selezione standard */
+
+.tomato{
+    color:tomato;
+    font-size:xx-large;
+}
+
+/* sempre usare "-" */
+
+.darkorchid-background{
+    background-color:darkorchid;
+}
+
+.italic-font{
+    font-style: italic;
+}
+
+/* selziona ID, trova UN solo tag, univoco, meglio non usarlo, utile per javascript */
+
+#lorem-p{
+    border-style: solid;
+}
+
+/* seleziona solo h1 che si trova nell'header, piu facile usare classi */
+
+header h1{
+    background-color: cadetblue;
+}
+
+/* applico il css a più elementi */
+
+header,footer{
+    border-style: dotted;
+}
+
+footer{
+    /* padding separa il contenuto dai bordi */
+
+    /* padding: 50px; lo applica a tutti lati*/
+
+    /*
+    padding-left: 25px;
+    padding-top: 100px;
+    padding-right: 100px;
+    padding-bottom: 200px;
+    */
+
+    /* padding: 100px 100px 200px 25px; va in senso orario*/
+
+    /* primo valore top e bottom, secondo valore left right */
+    /* padding: 10px 200px; */
+
+    /* margin separa la scatola dall'esterno */
+    margin: 200px 200px;
+}
+
+.resized-p{
+    background-color: deeppink;
+    color: gold;
+    width: 300px;
+}
+
+.resized-p2{
+    /* overflow */
+    background-color: deeppink;
+    color: gold;
+    width: 300px;
+    height: 100px;
+    /* soluzioni overflow */
+    /* overflow: hidden; */
+    overflow: scroll;
+}
+
+.resized-p3{
+    background-color: deeppink;
+    color: gold;
+    /* si adatta */
+    max-width: 1000px;
+    /* non si adatta */
+    min-width: 700px;
+}
+
+.mother{
+    background-color: darkred;
+    /* il figlio occupa tutta l'area con il suo colore, quindi size per differenziare */
+    padding: 8px;
+    /* 50% del body, da chi c'è sopra, il suo genitore */
+    width: 50%;
+}
+
+.son{
+    background-color: chartreuse;
+    /* 50% rispetto a mother */
+    width: 50%;
+}
+
+.mother2{
+    background-color: darkred;
+    padding: 8px;
+    width: 800px;
+    border-radius: 50px;
+    /* border-radius usato anche se non ci sono bordi */
+}
+
+.son2{
+    background-color: chartreuse;
+    width: 50vw;
+}
+
+.strange-borders{
+    /* per creare bordi sempre fare prima il border-style e poi dopo si fa quello che si vuole*/
+    border-style: solid;
+    /* solid di default il colore del bordo prende il colore del font */
+    border-color: green;
+    border-width: 20px;
+    border-radius: 20px;
+    /*
+    border-top-left-radius: ;
+    border-top-right-radius: ;
+    border-radius: 0px 20px 50px 100px; 
+    */
+
+    /*
+    border: solid green 20px:
+    si puo cambiare ordine    
+    */
+
+    /* padding se il contenuto esce fuori dal bordo */
+}
+
+header{
+    background-image: url("./assets/zeldabanner.jpg");
+    /* se un'immagine è piccola vien ripetuta per riempire di default quindi... */
+    background-repeat: no-repeat;
+    /*
+    background-size: auto; taglia l'immagine per adattarla
+    background-size: contain; fa in modo he l'immagine si veda tutta e sia conetenuta, rimpicciolendola
+    background-size: cover; non la taglia e conserva solo width dell'image, quindi isogna centrarla con background-position 
+    */
+    background-size: cover;
+    background-position: center center;
+    height: 300px;
+}
