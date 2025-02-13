@@ -1,0 +1,73 @@
+/* flex box utilissimo per i mobile */
+/* flex per i contenitori piccoli e grid per quelli grandi */
+
+*{
+    border: solid red;
+    /* vediamo i bordi di html, body e p (dall'ext all'int), di tutto xk "*" */
+    box-sizing: border-box;
+    /* questo diventa il nostro default, fa in modo che width includa non solo contenuto, ma anche padding e bordo */
+}
+
+p{
+    display: inline-block;
+    width: 49.8%;
+    /* solo il contenuto di p è 400px, se ne frega di padding e bordo, vale lo stesso per la % */
+    padding: 100px;
+}
+
+.mother{
+    height: 600px;
+    padding: 4px;
+    display: flex;
+    /* mamma sempre display flex */
+    justify-content: space-evenly;
+    /* center centra i figli, flex start partono da sinistra, flex end, da destra */
+    /* space between, space around, space evenly */
+
+    /* align-items: baseline; */
+
+    /* distribuisci i figli in verticale center, flex end, flex start, stretch se non c'è altezza fissa, baseline */
+
+    gap: 10px;
+    /* spazio minimo tra gli elementi */
+
+    /* la flex ignora la width figli quando supera limite */
+    /* la min-width è più forte quindi... */
+
+    /* flex-wrap: wrap-reverse; */
+    
+    /* wrap, reverse wrap */
+    /* con wrap bisogna tenere conto del width, interferisce solo l'altezza */
+
+    /* qui si occupa verticalmente */
+    flex-direction: column;
+}
+
+.son{
+    height: 292px;
+    /* width: 100px; */
+    min-width: 290px;
+    order: 100;
+}
+
+.green{
+
+    background-color: green;
+    /* flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 0; */
+    order: 6;
+}
+
+/* flex basis fa le proporzioni giiuste senza fare calcoli e tenere conto della dimensione del contenuto */
+
+.red{
+    background-color: red;
+    font-size: xx-large;
+
+    /* le fraction */
+    /* flex-grow: 2;
+    flex-shrink: 0;
+    flex-basis: 0;*/
+    order: 2;
+}
