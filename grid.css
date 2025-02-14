@@ -23,6 +23,40 @@
         facendo center, si applica a chi ha width definito*/
 }
 
+/* MEDIA QUERY chiede cose al sistema, e chideremo dimensioni shcermo */
+/* cercare screen width breakpoints bootstrap per trovare dimensioni */
+
+/* max-width <= breakpoint */
+@media (min-width: 576px) and (max-width: 768px) {
+    .grid-container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 300px 300px 600px 300px 300px;
+        grid-template-areas:
+        "header header"
+        "left-sidebar left-sidebar"
+        "main-content main-content"
+        "right-sidebar gold"
+        "footer footer";
+    }
+}
+
+@media (min-width: 0px) and (max-width: 576px) {
+    .grid-container{
+        /* non c'è bisogna di scrivere display:grid; */
+        /* con il cellulare c'è solo una colonna */
+        grid-template-columns: 1fr;
+        grid-template-rows: 300px 300px 600px 300px 300px 300px;
+        grid-template-areas:
+        "header"
+        "left-sidebar"
+        "main-content"
+        "right-sidebar"
+        "gold"
+        "footer";
+    }
+}
+  
+
 .g-i-1{
     background: red;
     /* attributi son */
