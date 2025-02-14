@@ -1,0 +1,102 @@
+/* sito, grid cheat sheet, css tricks */
+
+.grid-container{
+    display: grid;
+    /* la colonna si adatta sempre al contenuto, se deve stretchare stretcha */
+    grid-template-columns: 1fr 3fr 1fr;
+    /* px, %, e anche fr per fare proporzioni come con la flex */
+    /* di default div 100% width, ma height 0 */
+    grid-template-rows: 300px 300px 300px 300px;
+    grid-template-areas:
+    "header header header"
+    "left-sidebar main-content right-sidebar"
+    "gold main-content right-sidebar"
+    "footer footer footer";
+    column-gap: 20px;
+    row-gap: 20px;
+    /* per la flex justify-content per grid justify-items */
+    justify-items: stretch;
+    align-items: stretch;
+    /* justify-items: center;
+    align-items: center; */
+    /* di default è stretch, pero se una grid ha definito width non si fa stretchare, non riempe tutto
+        facendo center, si applica a chi ha width definito*/
+}
+
+.g-i-1{
+    background: red;
+    /* attributi son */
+    grid-area: header;
+}
+
+.g-i-2{
+    background: green;
+    /* attributi son */
+    /* do il nome al son */
+    grid-area: left-sidebar;
+}
+
+.g-i-3{
+    background: blue;
+    /* attributi son */
+    grid-area: main-content;
+}
+
+.g-i-4{
+    background: violet;
+    /* attributi son */
+    grid-area: right-sidebar;
+}
+
+.g-i-5{
+    background: yellow;
+    /* attributi son */
+    grid-area: footer;
+}
+
+.g-i-6{
+    width: 200px;
+    height: 200px;
+    background: magenta;
+    /* attributi son */
+    grid-area: gold;
+    /* orientamenti diversi rispetto alla mamma */
+    justify-self: center;
+    align-self: center;
+}
+
+/*
+PER I BUTTON
+
+.bgc-red{
+    background-color: red;
+    color: white;
+}
+
+.bgc-lblue{
+    background-color: lightblue;
+    color: black;
+}
+
+.mono-xxl{
+    font-family: monospace;
+    font-size: xx-large;
+}
+
+.courier-xxs{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: xx-small;
+}
+
+.padding-small{
+    padding: 12px;
+}
+
+.padding-medium{
+    padding: 16px;
+}
+
+.padding-large{
+    padding: 20px;
+} */
+
